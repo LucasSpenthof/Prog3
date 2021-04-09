@@ -1,0 +1,74 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "curso": "Acricultura",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Navirai"
+    },
+    {
+      "id": 2,
+      "curso": "Acropecuaria",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Nova Andradidna"
+    },
+    {
+      "id": 3,
+      "curso": "Alimentos",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Coxim"
+    },
+    {
+      "id": 4,
+      "curso": "Desenvolvimento de sistemas",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Coxim"
+    },
+    {
+      "id": 5,
+      "curso": "Edificações",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Aquidauana"
+    },
+    {
+      "id": 6,
+      "curso": "Eletrotecnica",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Campo Grande"
+    },
+    {
+      "id": 7,
+      "curso": "Informatica para internet",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Navirai"
+    },
+    {
+      "id": 8,
+      "curso": "Mecanica",
+      "nivel": "integrado",
+      "duracao": "3 anos",
+      "municipio": "Campo Grande"
+    },
+    {
+      "id": 9,
+      "curso": "Marketing",
+      "nivel": "Tecnico Comitante",
+      "duracao": "3 Semestres",
+      "municipio": "Dourados"
+    },
+    {
+      "id": 10,
+      "curso": "Zootecnia",
+      "nivel": "Tecnico subsequente",
+      "duracao": "3 Semestres",
+      "municipio": "Nova andradina"
+    }
+  ]
+}
