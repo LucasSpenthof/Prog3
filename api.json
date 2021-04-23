@@ -1,4 +1,18 @@
 {
+  "nivel": [
+    {
+      "id": 1,
+      "description": "integrado"
+    },
+    {
+      "id": 2,
+      "description": "Tecnico Comitante"
+    },
+    {
+      "id": 3,
+      "description": "Tecnico subsequente"
+    }
+  ],
   "cursos": [
     {
       "id": 1,

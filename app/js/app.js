@@ -1,5 +1,7 @@
 const apiData = document.querySelector('.api-data')
 const spinner = document.querySelector('.spinner-grow')
+const nivelFilter = document.querySelector('.nivel-filter')
+
 spinner.style.display="none"
 async function getCursos(){
     const url = "http://localhost:3000/cursos"
@@ -52,13 +54,25 @@ async function search(query){
           `
     })
 }
+async function getNivel(){
+    const url =`http://localhost:3000/nivel`
+    const response = await axios.get(url)
+    const nivelList = Array.from(response.data)
+    nivelList.forEach(function(nivel){
+        nivelFilter.innerHTML+=`<option value="${nivel.description}">${nivel.description}</option>`
+    })
+
+}
 const btnBuscar = document.querySelector('.btn-buscar')
 const inputSearch = document.querySelector('input[type=search]')
 btnBuscar.addEventListener('click',function(){
     search(inputSearch.value)
 })
+nivelFilter.addEventListener('change',function(){
+    search(nivelFilter.value)
+})
 getCursos()
-
+getCursos()
 
 
 
