@@ -72,7 +72,7 @@ nivelFilter.addEventListener('change',function(){
     search(nivelFilter.value)
 })
 getCursos()
-getCursos()
+getNivel()
 
 
 
