@@ -1,4 +1,5 @@
 import  getData  from "./api.js";
+import  getData  from "./rendercards.js";
 
 const apiData = document.querySelector('.api-data')
 const spinner = document.querySelector('.spinner-grow')
@@ -14,34 +15,12 @@ function showSpinner(isShow=false){
         spinner.style.display="none" 
 }
 
-function renderCards(cursosList){
-    cursosList.forEach(async function(cursos){
-        apiData.innerHTML+=`
-        <div class="card m-2" style="width:220px">
-            <section class="card-body">
-                <h5 class="card-title">${cursos.curso}</h5>
-                <p> 
-                    Nivel: ${cursos.nivel}
-                </p>
-                <p>
-                    Duracao: ${cursos.duracao}
-                </p>
-                <p>
-                    Municipio: ${cursos.municipio}
-                </p>
-            </section>
-        </div>
-        `
-    }) 
-
-}
-
 async function getCursos(){
     showSpinner(true)
     const response = await getData('cursos')
     showSpinner(false)
     const cursosList = Array.from(response.data)
-    renderCards(cursosList)
+    renderCards(cursosList, apiData)
 }
 
 async function search(query){
@@ -50,7 +29,7 @@ async function search(query){
     showSpinner(false)
     const cursosList = Array.from(response.data)
     apiData.innerHTML=""
-    renderCards(cursosList)
+    renderCards(cursosList, apiData)
 }
 async function getNivel(){
     const response = await getData('nivel')
