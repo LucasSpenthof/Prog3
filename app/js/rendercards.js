@@ -1,5 +1,5 @@
-export default function renderCards(cursosList, renderElemnt){
-    renderElemnt.innerHTML=''
+export default function renderCards(cursosList, renderElement){
+    renderElement.innerHTML=''
     cursosList.forEach(async function(cursos){
         renderElement.innerHTML+=`
         <div class="card m-2" style="width:220px">
