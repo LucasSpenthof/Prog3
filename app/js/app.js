@@ -28,7 +28,7 @@ async function search(query){
     const response = await getData(`cursos?q=${query}`)
     showSpinner(false)
     const cursosList = Array.from(response.data)
-    if(cursosList==""){
+    if(cursosList.length==0){
         apiData.innerHTML=`<div class="alert alert-warning"> Nenhum resultado para ${query} </div>`
 
     }else{
