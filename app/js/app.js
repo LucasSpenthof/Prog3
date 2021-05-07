@@ -28,8 +28,13 @@ async function search(query){
     const response = await getData(`cursos?q=${query}`)
     showSpinner(false)
     const cursosList = Array.from(response.data)
-    apiData.innerHTML=""
-    renderCards(cursosList, apiData)
+    if(cursosList==""){
+        apiData.innerHTML='<div class="alert alert-warning"> Nenhum resultadi para ${query} </div>'
+
+    }else{
+        apiData.innerHTML=""
+        renderCards(cursosList, apiData)
+    }
 }
 async function getNivel(){
     const response = await getData('nivel')
