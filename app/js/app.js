@@ -29,7 +29,7 @@ async function search(query){
     showSpinner(false)
     const cursosList = Array.from(response.data)
     if(cursosList==""){
-        apiData.innerHTML='<div class="alert alert-warning"> Nenhum resultado para ${query} </div>'
+        apiData.innerHTML=`<div class="alert alert-warning"> Nenhum resultado para ${query} </div>`
 
     }else{
         apiData.innerHTML=""
